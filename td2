@@ -1,0 +1,12 @@
+class photo{
+  string:photoURL
+}
+interface resizePhoto{
+
+}
+interface addLogo{
+
+}
+class thumbail extends photo{
+
+}
