@@ -1,12 +1,33 @@
-class photo{
-  string:photoURL
+package fr.utbm.gl51
+import java.awt.image;
+class photo extends Image{
+	
 }
-interface resizePhoto{
+class photoResizer{
+	public photo resize(photo p,integer width,integer height){
+	}
+}
+class photoFilter{
+	public photo addWatermark(photo p){}
+} 
+class thumbailGenerator{
+	photo generateThumbail(photo p){
+		th=photoResizer.resize(p,THUMBAILWIDTH,THUMBAILWIDTH);
+		th=photoFilter.addWatermark(th);
+		return th; 
+	}
+}
+class photoUploader(photo p){
+	public static final integer PHOTOWIDTH=1024;
+	public static final integer PHOTOHEIGHT=1024;
+	public static final integer THUMBAILWIDTH=50;
+	public static final integer THUMBAILWIDTH=50;
+	uploadPhoto(p);
+	uploadPhoto(photo p)
+	{
+		p=photoResizer.resize(p,PHOTOWIDTH,PHOTOHEIGHT);
+		th=thumbailGenerator.generateThumbail(p);
+		sendCloud(p,th);
+	}
+}
 
-}
-interface addLogo{
-
-}
-class thumbail extends photo{
-
-}
