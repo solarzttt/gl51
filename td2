@@ -28,6 +28,7 @@ class photoUploader(photo p){
 		p=photoResizer.resize(p,PHOTOWIDTH,PHOTOHEIGHT);
 		th=thumbailGenerator.generateThumbail(p);
 		sendCloud(p,th);
+		saveInDatabase(p,th);
 	}
 }
 
